@@ -6,9 +6,10 @@ ZONE=$(jq --raw-output ".zone" $CONFIG_PATH)
 HOST=$(jq --raw-output ".host" $CONFIG_PATH)
 EMAIL=$(jq --raw-output ".email" $CONFIG_PATH)
 API=$(jq --raw-output ".api" $CONFIG_PATH)
+PROXY=$(jq --raw-output ".proxy" $CONFIG_PATH)
 
 # Enforces required env variables
-required_vars=(ZONE HOST EMAIL API)
+required_vars=(ZONE HOST EMAIL API PROXY)
 for required_var in "${required_vars[@]}"; do
     if [[ -z ${!required_var} ]]; then
         error=1
@@ -21,7 +22,7 @@ if [[ -n $error ]]; then
 fi
 
 # PROXY defaults to true
-PROXY=${PROXY:-true}
+# PROXY=${PROXY:-true}
 
 # TTL defaults to 1 (automatic), and is validated
 TTL=${TTL:-1}
