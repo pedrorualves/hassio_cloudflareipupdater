@@ -12,12 +12,14 @@
     "zone": "",
     "host": "",
     "email": "",
-    "api": ""
+    "api": "",
+    "proxy":""
   },
   "schema": {
     "zone": "str",
     "host": "str",
     "email": "str",
-    "api": "str"
+    "api": "str",
+    "proxy": "str"
   }
 } 
