@@ -19,7 +19,8 @@ The available configuration options are as follows (this is filled in with some 
     "zone": "yourdomain.com",
     "host": "sub.yourdomain.com",
     "email": "hello@yourdomain.com",
-    "api": "yourAPIkeyFromCloudflare"
+    "api": "yourAPIkeyFromCloudflare",
+    "proxy": "true"
 }
 ```
 
